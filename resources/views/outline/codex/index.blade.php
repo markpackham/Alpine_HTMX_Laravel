@@ -19,6 +19,8 @@
     </a>
   </div>
 
+{{-- filter buttons }}
+
   @php
     $types = ['character', 'item', 'location'];
   @endphp
@@ -26,7 +28,7 @@
   @foreach ($types as $type)
     @if(isset($codexEntries[$type]) && $codexEntries[$type]->count())
       <div 
-        class="codex-group codex-group-{{ $type }} mb-6"
+        class="codex-group codex-group-{{ $type }} mb-6" x-show=""
       >
         <h2 class="text-lg font-semibold capitalize">{{ $type }}s</h2>
         <ul class="ml-4">
