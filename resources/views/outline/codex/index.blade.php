@@ -33,6 +33,14 @@
   <button x-on:click="$store.codex.filter = 'location'" :class="{'active': $store.codex.filter === 'location'}"
   >Locations</button>
 </div>
+
+<div class="mb-6">
+  <input type="text"
+  placeholder="Search codex ..."
+  class="p-2 border rounded w-full"
+  x-model="$store.codex.search"
+  >
+</div>
 @endif
 
   @php

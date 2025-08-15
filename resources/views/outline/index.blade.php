@@ -78,6 +78,7 @@
     // Alpine store for codex state
     Alpine.store('codex',{
       filter: 'all',
+      search: '',
     })
   })
 </script>
