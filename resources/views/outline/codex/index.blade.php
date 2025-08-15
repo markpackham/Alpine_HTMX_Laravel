@@ -56,7 +56,7 @@
         <ul class="ml-4">
           @foreach ($codexEntries[$type] as $entry)
             <li class="codex-entry" id="codex-entry-{{ $entry->id }}"
-              x-show="$store.codex.matches(#{{$entry->name}})"
+              x-show="$store.codex.matches('{{$entry->name}}')"
               >
               <a href="{{ route('outline.codex.show', $entry) }}"
                 @if($isHtmx)
