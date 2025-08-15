@@ -23,7 +23,7 @@ x-init
     <!-- Header -->
     <header class="site-header">
       <nav>
-        <a href="{{ url('/') }}" class="site-title">
+        <a href="{{ url('/') }}" class="site-title mr-auto">
           Arcitect
         </a>
         <a href="{{ url('/outline') }}">
