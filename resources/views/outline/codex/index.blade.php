@@ -24,17 +24,14 @@
 @if($isHtmx)
 <div class="filters">
   <p>Filters:</p>
-  <button x-on:click="filter = 'all'" :class="{'active': filter === 'all'}"
+  <button x-on:click="$store.codex.filter = 'all'" :class="{'active': $store.codex.filter === 'all'}"
   >All</button>
-  <button x-on:click="filter = 'character'" :class="{'active': filter === 'character'}"
+  <button x-on:click="$store.codex.filter = 'character'" :class="{'active': $store.codex.filter === 'character'}"
   >Characters</button>
-  <button x-on:click="filter = 'item'" :class="{'active': filter === 'item'}"
+  <button x-on:click="$store.codex.filter = 'item'" :class="{'active': $store.codex.filter === 'item'}"
   >Items</button>
-  <button x-on:click="filter = 'location'" :class="{'active': filter === 'location'}"
+  <button x-on:click="$store.codex.filter = 'location'" :class="{'active': $store.codex.filter === 'location'}"
   >Locations</button>
-</div>
-<div x-text="filter">
-
 </div>
 @endif
 
@@ -45,7 +42,7 @@
   @foreach ($types as $type)
     @if(isset($codexEntries[$type]) && $codexEntries[$type]->count())
       <div 
-        class="codex-group codex-group-{{ $type }} mb-6" x-show="filter === 'all' || filter === '{{$type}}' "
+        class="codex-group codex-group-{{ $type }} mb-6" x-show="$store.codex.filter === 'all' || $store.codex.filter === '{{$type}}' "
       >
         <h2 class="text-lg font-semibold capitalize">{{ $type }}s</h2>
         <ul class="ml-4">
