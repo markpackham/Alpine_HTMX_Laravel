@@ -24,7 +24,17 @@
 @if($isHtmx)
 <div class="filters">
   <p>Filters:</p>
-  <button>All</button>
+  <button x-on:click="filter = 'all'" :class="{'active': filter === 'all'}"
+  >All</button>
+  <button x-on:click="filter = 'character'" :class="{'active': filter === 'character'}"
+  >Characters</button>
+  <button x-on:click="filter = 'item'" :class="{'active': filter === 'item'}"
+  >Items</button>
+  <button x-on:click="filter = 'location'" :class="{'active': filter === 'location'}"
+  >Locations</button>
+</div>
+<div x-text="filter">
+
 </div>
 @endif
 
