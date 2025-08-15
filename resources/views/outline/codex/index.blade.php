@@ -7,6 +7,7 @@
   <div 
     class="codex-list content" 
     id="codex-list"
+    x-data="{filter: 'all'}"
   >
   <div class="flex justify-between items-center mb-8">
     <h2 class="text-xl ml-2 font-bold">Codex Entries</h2>
@@ -19,7 +20,13 @@
     </a>
   </div>
 
-{{-- filter buttons }}
+{{-- filter buttons if we are using HTMX --}}
+@if($isHtmx)
+<div class="filters">
+  <p>Filters:</p>
+  <button>All</button>
+</div>
+@endif
 
   @php
     $types = ['character', 'item', 'location'];
