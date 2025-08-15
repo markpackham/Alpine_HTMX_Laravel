@@ -7,7 +7,7 @@
   <div 
     class="codex-list content" 
     id="codex-list"
-    x-data="{filter: 'all'}"
+    
   >
   <div class="flex justify-between items-center mb-8">
     <h2 class="text-xl ml-2 font-bold">Codex Entries</h2>
