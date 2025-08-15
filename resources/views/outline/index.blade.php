@@ -91,8 +91,8 @@
       Alpine.store('codex').search = ''
     }
 
-    if(e.detail.target.id === 'modal'){
-      window.scrollTo({top: 0, behavior: 'smooth'})
+    if (e.detail.target.id === 'modal') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   })
 </script>
