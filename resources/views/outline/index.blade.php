@@ -74,7 +74,7 @@
 </script>
 
 <script>
-  document.addEventListener('alphine:init', ()=>{
+  document.addEventListener('alpine:init', ()=>{
     // Alpine store for codex state
     Alpine.store('codex',{
       filter: 'all',
