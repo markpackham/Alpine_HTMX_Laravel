@@ -14,7 +14,10 @@
   @stack('head')
 </head>
 
-<body hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
+<body hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'
+x-init
+:class="{dark:$store.theme.dark}"
+>
   <div class="flex flex-col min-h-screen">
 
     <!-- Header -->
@@ -26,6 +29,15 @@
         <a href="{{ url('/outline') }}">
           Outline Dashboard
         </a>
+
+        {{-- Light & Dark mode button --}}
+        <button
+          class="ml-4"
+          x-on:click="$store.theme.toggle()" 
+          x-text="$store.theme.dark ? '☀︎' : '⏾'"
+        ></button>
+
+        </button>
       </nav>
     </header>
 
