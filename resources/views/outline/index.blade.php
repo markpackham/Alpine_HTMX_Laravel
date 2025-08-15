@@ -85,5 +85,11 @@
       }
     })
   })
+
+  document.addEventListener('htmx:afterSwap', (e)=>{
+    if(e.details.target.id==='codex-list'){
+      Alpine.store('codex').search = ''
+    }
+  })
 </script>
 @endpush
